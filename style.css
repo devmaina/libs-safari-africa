@@ -170,7 +170,33 @@ nav a:hover {
     box-shadow: 0 8px 32px rgba(14,30,64,0.13);
 }
 
-/* Responsive */
+/* Card container for flex layout */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem 1.2rem;
+    margin: 0.5rem;
+    max-width: 270px;
+    min-width: 220px;
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+}
+.card:hover {
+    box-shadow: 0 8px 32px rgba(14,30,64,0.13);
+}
+
 @media (max-width: 900px) {
     .fade-gallery {
         width: 90vw;
@@ -179,6 +205,14 @@ nav a:hover {
     }
     .section {
         padding: 1.2rem 0.7rem;
+    }
+    .card-container {
+        gap: 1rem;
+    }
+    .card {
+        max-width: 100%;
+        min-width: 160px;
+        padding: 1rem 0.7rem;
     }
 }
 @media (max-width: 600px) {
@@ -192,5 +226,14 @@ nav a:hover {
     }
     header h1 {
         font-size: 1.5rem;
+    }
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 95vw;
+        min-width: unset;
+        max-width: 98vw;
     }
 }

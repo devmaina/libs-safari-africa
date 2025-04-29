@@ -42,33 +42,89 @@
 </head>
 <body>
     <header>
-        <h1>Libs Safari Africa</h1>
-        <nav>
-            <a href="places.html">Places</a>
-            <a href="hotels.html">Hotels</a>
-            <a href="Food.html">Food</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-        </nav>
+        <div class="header-flex">
+            <img src="logo.png" alt="Libs Safari Africa Logo" class="header-logo">
+            <span class="header-title">Libs Safari Africa</span>
+            <nav>
+
+                <a href="index.html">Home</a>
+                
+                <a href="places.html">Places</a>
+                <a href="hotels.html">Hotels</a>
+                <a href="Food.html">Food</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+
+            </nav>
+        </div>
+        <p>Explore Africa's Wonders – Unforgettable Journeys Across the Continent</p>
     </header>
     <main>
-        <section class="places">
+        <section class="section places">
             <h2>Top Places to Visit</h2>
             <p>Explore our curated list of must-visit destinations across Africa, perfect for your next adventure.</p>
-            <!-- Example place listing -->
-            <div class="place-item">
-                <h3>Maasai Mara National Reserve</h3>
-                <p>Experience the world-famous wildebeest migration and stunning landscapes.</p>
-                <button class="like-btn" onclick="likePlace('maasai')">Like</button>
-                <span class="like-count" id="like-maasai">0</span>
+            <div class="card-container">
+                <div class="card place-item">
+                    <h3>Maasai Mara National Reserve</h3>
+                    <p>Experience the world-famous wildebeest migration and stunning landscapes.</p>
+                    <button class="like-btn" onclick="likePlace('maasai')">Like</button>
+                    <span class="like-count" id="like-maasai">0</span>
+                </div>
+                <div class="card place-item">
+                    <h3>Victoria Falls</h3>
+                    <p>Marvel at one of the largest and most spectacular waterfalls in the world.</p>
+                    <button class="like-btn" onclick="likePlace('victoria')">Like</button>
+                    <span class="like-count" id="like-victoria">0</span>
+                </div>
+                <div class="card place-item">
+                    <h3>Table Mountain</h3>
+                    <p>Iconic flat-topped mountain overlooking Cape Town, South Africa.</p>
+                    <button class="like-btn" onclick="likePlace('tablemountain')">Like</button>
+                    <span class="like-count" id="like-tablemountain">0</span>
+                </div>
+                <div class="card place-item">
+                    <h3>Sahara Desert</h3>
+                    <p>The world's largest hot desert, stretching across North Africa.</p>
+                    <button class="like-btn" onclick="likePlace('sahara')">Like</button>
+                    <span class="like-count" id="like-sahara">0</span>
+                </div>
+                <div class="card place-item">
+                    <h3>Okavango Delta</h3>
+                    <p>Unique inland delta in Botswana, teeming with wildlife and waterways.</p>
+                    <button class="like-btn" onclick="likePlace('okavango')">Like</button>
+                    <span class="like-count" id="like-okavango">0</span>
+                </div>
+                <div class="card place-item">
+                    <h3>Pyramids of Giza</h3>
+                    <p>Ancient wonders of the world, located near Cairo, Egypt.</p>
+                    <button class="like-btn" onclick="likePlace('giza')">Like</button>
+                    <span class="like-count" id="like-giza">0</span>
+                </div>
+                <div class="card place-item">
+                    <h3>Serengeti National Park</h3>
+                    <p>Famous for its annual migration and diverse wildlife in Tanzania.</p>
+                    <button class="like-btn" onclick="likePlace('serengeti')">Like</button>
+                    <span class="like-count" id="like-serengeti">0</span>
+                </div>
+                <div class="card place-item">
+                    <h3>Mount Kilimanjaro</h3>
+                    <p>Africa's highest peak, a popular trekking destination in Tanzania.</p>
+                    <button class="like-btn" onclick="likePlace('kilimanjaro')">Like</button>
+                    <span class="like-count" id="like-kilimanjaro">0</span>
+                </div>
+                <div class="card place-item">
+                    <h3>Kruger National Park</h3>
+                    <p>One of Africa's largest game reserves, located in South Africa.</p>
+                    <button class="like-btn" onclick="likePlace('kruger')">Like</button>
+                    <span class="like-count" id="like-kruger">0</span>
+                </div>
+                <div class="card place-item">
+                    <h3>Zanzibar Beaches</h3>
+                    <p>Pristine white-sand beaches and turquoise waters off the coast of Tanzania.</p>
+                    <button class="like-btn" onclick="likePlace('zanzibar')">Like</button>
+                    <span class="like-count" id="like-zanzibar">0</span>
+                </div>
             </div>
-            <div class="place-item">
-                <h3>Victoria Falls</h3>
-                <p>Marvel at one of the largest and most spectacular waterfalls in the world.</p>
-                <button class="like-btn" onclick="likePlace('victoria')">Like</button>
-                <span class="like-count" id="like-victoria">0</span>
-            </div>
-            <!-- Add more places as needed -->
         </section>
     </main>
     <script>

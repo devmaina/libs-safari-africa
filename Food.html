@@ -42,33 +42,87 @@
 </head>
 <body>
     <header>
-        <h1>Libs Safari Africa</h1>
-        <nav>
-            <a href="places.html">Places</a>
-            <a href="hotels.html">Hotels</a>
-            <a href="Food.html">Food</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-        </nav>
+        <div class="header-flex">
+            <img src="logo.png" alt="Libs Safari Africa Logo" class="header-logo">
+            <span class="header-title">Libs Safari Africa</span>
+            <nav>
+                <a href="index.html">Home</a>
+
+                <a href="places.html">Places</a>
+                <a href="hotels.html">Hotels</a>
+                <a href="Food.html">Food</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+        <p>Explore Africa's Wonders – Unforgettable Journeys Across the Continent</p>
     </header>
     <main>
-        <section class="food">
+        <section class="section food">
             <h2>Traditional African Dishes</h2>
             <p>Explore our selection of popular African foods and culinary delights.</p>
-            <!-- Example food listing -->
-            <div class="food-item">
-                <h3>Ugali</h3>
-                <p>A staple food in East Africa, made from maize flour and water.</p>
-                <button class="like-btn" onclick="likeFood('ugali')">Like</button>
-                <span class="like-count" id="like-ugali">0</span>
+            <div class="card-container">
+                <div class="card food-item">
+                    <h3>Ugali</h3>
+                    <p>A staple food in East Africa, made from maize flour and water.</p>
+                    <button class="like-btn" onclick="likeFood('ugali')">Like</button>
+                    <span class="like-count" id="like-ugali">0</span>
+                </div>
+                <div class="card food-item">
+                    <h3>Jollof Rice</h3>
+                    <p>A popular West African dish made with rice, tomatoes, and spices.</p>
+                    <button class="like-btn" onclick="likeFood('jollof')">Like</button>
+                    <span class="like-count" id="like-jollof">0</span>
+                </div>
+                <div class="card food-item">
+                    <h3>Bunny Chow</h3>
+                    <p>A South African fast food dish consisting of a hollowed-out loaf of bread filled with curry.</p>
+                    <button class="like-btn" onclick="likeFood('bunny')">Like</button>
+                    <span class="like-count" id="like-bunny">0</span>
+                </div>
+                <div class="card food-item">
+                    <h3>Injera</h3>
+                    <p>A sour fermented flatbread from Ethiopia, served with stews and salads.</p>
+                    <button class="like-btn" onclick="likeFood('injera')">Like</button>
+                    <span class="like-count" id="like-injera">0</span>
+                </div>
+                <div class="card food-item">
+                    <h3>Tagine</h3>
+                    <p>A North African slow-cooked stew braised at low temperatures, made with meat and vegetables.</p>
+                    <button class="like-btn" onclick="likeFood('tagine')">Like</button>
+                    <span class="like-count" id="like-tagine">0</span>
+                </div>
+                <div class="card food-item">
+                    <h3>Chapati</h3>
+                    <p>A soft, unleavened flatbread popular in East Africa, often served with stews.</p>
+                    <button class="like-btn" onclick="likeFood('chapati')">Like</button>
+                    <span class="like-count" id="like-chapati">0</span>
+                </div>
+                <div class="card food-item">
+                    <h3>Suya</h3>
+                    <p>A spicy meat skewer popular in Nigeria and West Africa, grilled over open flames.</p>
+                    <button class="like-btn" onclick="likeFood('suya')">Like</button>
+                    <span class="like-count" id="like-suya">0</span>
+                </div>
+                <div class="card food-item">
+                    <h3>Braai</h3>
+                    <p>A South African barbecue tradition featuring grilled meats and sausages.</p>
+                    <button class="like-btn" onclick="likeFood('braai')">Like</button>
+                    <span class="like-count" id="like-braai">0</span>
+                </div>
+                <div class="card food-item">
+                    <h3>Matoke</h3>
+                    <p>A dish of steamed green bananas, popular in Uganda and East Africa.</p>
+                    <button class="like-btn" onclick="likeFood('matoke')">Like</button>
+                    <span class="like-count" id="like-matoke">0</span>
+                </div>
+                <div class="card food-item">
+                    <h3>Biryani</h3>
+                    <p>A flavorful rice dish with spices, meat, and vegetables, enjoyed in East Africa.</p>
+                    <button class="like-btn" onclick="likeFood('biryani')">Like</button>
+                    <span class="like-count" id="like-biryani">0</span>
+                </div>
             </div>
-            <div class="food-item">
-                <h3>Jollof Rice</h3>
-                <p>A popular West African dish made with rice, tomatoes, and spices.</p>
-                <button class="like-btn" onclick="likeFood('jollof')">Like</button>
-                <span class="like-count" id="like-jollof">0</span>
-            </div>
-            <!-- Add more food items as needed -->
         </section>
     </main>
     <script>
