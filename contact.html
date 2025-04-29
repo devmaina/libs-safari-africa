@@ -4,17 +4,39 @@
     <meta charset="UTF-8">
     <title>Contact Us | Libs Safari Africa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Libs Safari Africa for your next African adventure or request a custom itinerary.">
+    <meta name="keywords" content="Contact, Africa, Safari, Travel, Itinerary, Libs Safari Africa">
+    <meta name="author" content="Libs Safari Africa">
+    <meta property="og:title" content="Contact Us | Libs Safari Africa">
+    <meta property="og:description" content="Contact Libs Safari Africa for your next African adventure or request a custom itinerary.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/contact.html">
+    <meta property="og:image" content="logo.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Libs Safari Africa",
+      "url": "https://yourdomain.com/contact.html",
+      "logo": "logo.jpg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+254-XXX-XXXXXX",
+        "contactType": "customer service"
+      }
+    }
+    </script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Libs Safari Africa</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="social.html">Social</a>
+            <a href="places.html">Places</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="Food.html">Food</a>
             <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
         </nav>
     </header>
     <main>
@@ -25,6 +47,16 @@
                 <p><strong>Phone:</strong> [Your Phone Number]</p>
                 <p><strong>Email:</strong> [your@email.com]</p>
             </div>
+            <form class="itinerary-form" method="post" action="#" style="margin-top:2rem;">
+                <h3>Request a Custom Itinerary</h3>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="details">Trip Details:</label><br>
+                <textarea id="details" name="details" rows="4" required></textarea><br>
+                <button type="submit">Submit Request</button>
+            </form>
             <p style="margin-top:1.5rem;">Let us help you explore the wonders of Africa!</p>
         </section>
     </main>

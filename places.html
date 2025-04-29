@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Places | Libs Safari Africa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the best places in Africa with Libs Safari Africa. Discover top destinations for your next adventure.">
+    <meta name="keywords" content="Africa, Places, Safari, Destinations, Travel, Libs Safari Africa">
+    <meta name="author" content="Libs Safari Africa">
+    <meta property="og:title" content="Places | Libs Safari Africa">
+    <meta property="og:description" content="Explore the best places in Africa with Libs Safari Africa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/places.html">
+    <meta property="og:image" content="logo.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Libs Safari Africa Places",
+      "url": "https://yourdomain.com/places.html",
+      "logo": "logo.jpg",
+      "description": "Top destinations and places to visit across Africa."
+    }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .like-btn {
+        background: #ff9800;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+      .like-count {
+        margin-left: 10px;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Libs Safari Africa</h1>
+        <nav>
+            <a href="places.html">Places</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="Food.html">Food</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <main>
+        <section class="places">
+            <h2>Top Places to Visit</h2>
+            <p>Explore our curated list of must-visit destinations across Africa, perfect for your next adventure.</p>
+            <!-- Example place listing -->
+            <div class="place-item">
+                <h3>Maasai Mara National Reserve</h3>
+                <p>Experience the world-famous wildebeest migration and stunning landscapes.</p>
+                <button class="like-btn" onclick="likePlace('maasai')">Like</button>
+                <span class="like-count" id="like-maasai">0</span>
+            </div>
+            <div class="place-item">
+                <h3>Victoria Falls</h3>
+                <p>Marvel at one of the largest and most spectacular waterfalls in the world.</p>
+                <button class="like-btn" onclick="likePlace('victoria')">Like</button>
+                <span class="like-count" id="like-victoria">0</span>
+            </div>
+            <!-- Add more places as needed -->
+        </section>
+    </main>
+    <script>
+      function likePlace(placeId) {
+        var countSpan = document.getElementById('like-' + placeId);
+        var count = parseInt(countSpan.textContent, 10) || 0;
+        count++;
+        countSpan.textContent = count;
+      }
+    </script>
+</body>
+</html>

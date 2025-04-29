@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food | Libs Safari Africa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover delicious African cuisine with Libs Safari Africa. Explore traditional dishes and culinary experiences.">
+    <meta name="keywords" content="Africa, Food, Cuisine, Dishes, Travel, Libs Safari Africa">
+    <meta name="author" content="Libs Safari Africa">
+    <meta property="og:title" content="Food | Libs Safari Africa">
+    <meta property="og:description" content="Discover delicious African cuisine with Libs Safari Africa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/Food.html">
+    <meta property="og:image" content="logo.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Libs Safari Africa Food",
+      "url": "https://yourdomain.com/Food.html",
+      "logo": "logo.jpg",
+      "description": "Traditional African dishes and culinary experiences."
+    }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .like-btn {
+        background: #ff9800;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+      .like-count {
+        margin-left: 10px;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Libs Safari Africa</h1>
+        <nav>
+            <a href="places.html">Places</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="Food.html">Food</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <main>
+        <section class="food">
+            <h2>Traditional African Dishes</h2>
+            <p>Explore our selection of popular African foods and culinary delights.</p>
+            <!-- Example food listing -->
+            <div class="food-item">
+                <h3>Ugali</h3>
+                <p>A staple food in East Africa, made from maize flour and water.</p>
+                <button class="like-btn" onclick="likeFood('ugali')">Like</button>
+                <span class="like-count" id="like-ugali">0</span>
+            </div>
+            <div class="food-item">
+                <h3>Jollof Rice</h3>
+                <p>A popular West African dish made with rice, tomatoes, and spices.</p>
+                <button class="like-btn" onclick="likeFood('jollof')">Like</button>
+                <span class="like-count" id="like-jollof">0</span>
+            </div>
+            <!-- Add more food items as needed -->
+        </section>
+    </main>
+    <script>
+      function likeFood(foodId) {
+        var countSpan = document.getElementById('like-' + foodId);
+        var count = parseInt(countSpan.textContent, 10) || 0;
+        count++;
+        countSpan.textContent = count;
+      }
+    </script>
+</body>
+</html>
