@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, rgb(251,65,68) 0%, rgb(18,95,121) 100%);
+    color: #fff;
+    min-height: 100vh;
+}
+header {
+    background: rgba(18,95,121,0.95);
+    box-shadow: 0 4px 16px rgba(18,95,121,0.3);
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+}
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 2px;
+    color: rgb(251,65,68);
+    text-shadow: 2px 2px 12px rgba(18,95,121,0.4);
+}
+header p {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 8px rgba(18,95,121,0.3);
+}
+nav {
+    margin: 1.5rem 0;
+}
+nav a {
+    color: #fff;
+    background: rgb(251,65,68);
+    padding: 0.5rem 1.2rem;
+    margin: 0 0.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(251,65,68,0.2);
+    transition: background 0.2s;
+}
+nav a:hover {
+    background: rgb(18,95,121);
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 3rem 0;
+}
+
+
+
+.hero-text {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 8px rgba(18,95,121,0.3);
+    margin-top: 1rem;
+    text-align: center;
+}
+.hero-text span {
+    font-weight: bold;
+    color: rgb(251,65,68);
+    text-shadow: 2px 2px 12px rgba(18,95,121,0.4);
+}
+
+
+
+.fade-gallery {
+    position: relative;
+    width: 50vw;
+    height: 300px;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(18,95,121,0.25);
+}
+.fade-gallery img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s;
+}
+.fade-gallery img.active {
+    opacity: 1;
+}
+@media (max-width: 600px) {
+    .fade-gallery {
+        width: 98vw;
+        height: 38vw;
+        min-height: 160px;
+    }
+}

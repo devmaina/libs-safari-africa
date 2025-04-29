@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Libs Safari Africa | Explore Africa's Wonders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Libs Safari Africa</h1>
+        <p>Explore Africa's Wonders – Unforgettable Journeys Across the Continent</p>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="social.html">Social</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <span class="fade-gallery" id="fadeGallery">
+            <img src="africa1.jpg" alt="Safari Adventure" class="active">
+            <img src="africa2.jpg" alt="Savannah Sunset">
+            <img src="africa3.jpg" alt="Wildlife Experience">
+            <img src="africa4.jpg" alt="Cultural Tour">
+        </span>
+        <span   class="hero-text"  >Discover, Experience, Remember</span>
+
+
+       
+    </section>
+
+    <script>
+        // Simple fade in/out gallery
+        const images = document.querySelectorAll('#fadeGallery img');
+        let current = 0;
+        setInterval(() => {
+            images[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+        }, 3200);
+    </script>
+</body>
+</html>
