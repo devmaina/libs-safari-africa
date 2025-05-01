@@ -322,9 +322,8 @@ nav a:hover {
         height: 38vw;
         min-height: 160px;
     }
-    h3 {
-display: none;   
- }
+    
+    
 
     .section {
         padding: 1rem 2vw;
@@ -360,25 +359,38 @@ display: none;
     }
     .header-flex {
         display: flex;
+        flex-direction: row;
         align-items: center;
-        justify-content: flex-start;
-        gap: 0.3rem;
+        justify-content: space-between;
+        width: 100%;
     }
     .header-link {
-        gap: 0.2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        flex-shrink: 1;
+        min-width: 0;
     }
     .header-logo {
         height: 28px;
-        max-width: 38vw;
+        max-width: 32vw;
         margin: 0 0.1rem 0 0;
         padding: 0;
-        display: block;
     }
     .header-title {
         font-size: 1rem;
         margin: 0;
         padding: 0;
-        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .hamburger {
+        display: flex;
+        position: static;
+        margin-left: 0.5rem;
+        align-items: center;
+        justify-content: center;
     }
     header > .header-flex > nav {
         display: none !important;
@@ -427,9 +439,9 @@ display: none;
         margin-top: 0.5rem;
     }
     .card {
-        width: 80vw;
+        width: 88vw;
         max-width: 88vw;
-        padding: 0.8rem 1vw;
+        padding: 2vw;
         font-size: 0.9rem;
         margin: 0.1rem 0;
     }
@@ -452,13 +464,13 @@ display: none;
     .overlay-nav.active {
         display: flex;
     }
-    /* Main content containers fit 80vw and are centered */
+    /* Main content containers fit 88vw and are centered */
     .section,
     .card,
     .card-container,
     main > *,
     .body-content {
-        width: 80vw !important;
+        width: 88vw !important;
         max-width: 90vw;
         margin-left: auto !important;
         margin-right: auto !important;
