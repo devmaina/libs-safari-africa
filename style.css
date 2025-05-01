@@ -27,7 +27,7 @@ body {
 header {
     /* background: var(--primary); */
     background: none;
-    border-bottom: 3px solid var(--secondary);
+    border-bottom: 1px solid var(--secondary);
     box-shadow: none;
     padding: 1.2rem 2vw 0.5rem 2vw;
     text-align: center;
@@ -36,8 +36,11 @@ header {
 }
 
 .header-flex {
-    flex-wrap: wrap;
-    gap: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 1.2rem;
 }
 
 .header-logo {
@@ -46,17 +49,100 @@ header {
     width: auto;
     margin-right: 0.3rem;
 }
+h3{
+    font-size: 1.2rem;
+    color: var(--primary);
+    text-shadow: 1px 1px 8px rgba(14,30,64,0.08);
+    text-align: center;
+    font-weight: 700;
+}
 .header-title {
     font-size: 1.5rem;
     margin-right: 0.7rem;
     color: var(--secondary);
     letter-spacing: 2px;
     text-shadow: 2px 2px 12px rgba(14,30,64,0.08);
+    font-weight: 900;
+}
+.header-title .libs-bold {
+    color: var(--primary);
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    font-size: 1.6em;
+}
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    background: var(--secondary);
+    color: var(--primary);
+    border: none;
+    font-size: 2.2rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 30%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 2vw;
+    top: 10px;
+    /* Moved from left: 50%; transform: translateX(-50%); to right: 2vw; */
+    z-index: 20;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(247,183,49,0.12);
+    transition: background 0.2s, color 0.2s;
+}
+.hamburger:active, .hamburger:focus {
+    background: var(--primary);
+    color: var(--secondary);
+    outline: none;
+    border: 2px solid var(--secondary);
+}
+.hamburger:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+
+/* Overlay nav styles */
+.overlay-nav {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(14,30,64,0.97);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.overlay-nav.active {
+    display: flex;
+}
+.overlay-nav nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.overlay-nav nav a {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0.7rem 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+.overlay-nav nav a:hover {
+    color: var(--accent);
+    background: none;
 }
 
 nav {
-    margin: 1rem 0;
+    display: flex;
+    align-items: center;
     gap: 0.5rem;
+    margin: 1rem 0;
     flex-wrap: wrap;
 }
 nav a {
@@ -193,12 +279,55 @@ nav a:hover {
     box-shadow: 0 8px 32px rgba(14,30,64,0.13);
 }
 
+/* Header link styles */
+.header-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.5rem;
+}
+
+/* Itinerary form styles */
+.itinerary-form {
+    margin-top: 2rem;
+}
+
+/* Contact info styles */
+.contact-info p {
+    margin: 0.5em 0;
+}
+
+/* Margin top utility class */
+.margin-top-1-5rem {
+    margin-top: 1.5rem;
+}
+
+/* Like button styles */
+.like-btn {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.like-count {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
 @media (max-width: 900px) {
     .fade-gallery {
         width: 98vw;
         height: 38vw;
         min-height: 160px;
     }
+    h3 {
+display: none;   
+ }
+
     .section {
         padding: 1rem 2vw;
     }
@@ -211,11 +340,18 @@ nav a:hover {
         padding: 0.8rem 2vw;
     }
     .header-title {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
+    }
+    .header-title .libs-bold {
+        font-size: 1.5em;
+
     }
     .header-logo {
         height: 36px;
         max-width: 40vw;
+        margin-right: 0vw;
+        margin-left: 0vw;
+
     }
 }
 
@@ -224,6 +360,7 @@ nav a:hover {
         padding: 0.4rem 1vw 0.2rem 1vw;
     }
     .header-flex {
+        display: block;
         gap: 0.15rem;
     }
     .header-logo {
@@ -237,6 +374,7 @@ nav a:hover {
         text-align: center;
     }
     nav {
+        display: none !important;
         gap: 0.15rem;
         margin: 0.3rem 0;
         padding: 0;
@@ -292,5 +430,34 @@ nav a:hover {
     p, h1, h2, h3, h4, h5, h6, li {
         font-size: 0.92rem !important;
         margin: 0.2em 0 !important;
+    }
+    .hamburger {
+        display: flex;
+        right: 2vw;
+        left: auto;
+        /* Ensures hamburger is at top right on mobile */
+    }
+    .overlay-nav {
+        display: none;
+    }
+    .overlay-nav.active {
+        display: flex;
+    }
+    /* Main content containers fit 80vw and are centered */
+    .section,
+    .card,
+    .card-container,
+    main > *,
+    .body-content {
+        width: 80vw !important;
+        max-width: 90vw;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    /* Add a little vertical margin for separation */
+    .section,
+    .card {
+        margin-top: 1.2rem !important;
+        margin-bottom: 1.2rem !important;
     }
 }
