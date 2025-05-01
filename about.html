@@ -64,5 +64,25 @@
             </p>
         </section>
     </main>
+    <script>
+        // Hamburger/overlay nav logic
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const overlayNav = document.getElementById('overlayNav');
+        if (hamburgerBtn && overlayNav) {
+            hamburgerBtn.addEventListener('click', function(e) {
+                overlayNav.classList.add('active');
+            });
+            overlayNav.addEventListener('click', function(e) {
+                if (e.target === overlayNav) {
+                    overlayNav.classList.remove('active');
+                }
+            });
+            overlayNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    overlayNav.classList.remove('active');
+                });
+            });
+        }
+    </script>
 </body>
 </html>
