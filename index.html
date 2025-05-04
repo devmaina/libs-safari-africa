@@ -60,14 +60,16 @@
         </div>
         <div class="fade-gallery" id="fadeGallery">
             <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Safari Adventure"   class="active">
-            <!-- <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Savannah Sunset"> -->
             <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Wildlife Experience">
-            <!-- <img src="https://images.unsplash.com/photo-1463592177119-4438b20f0c7e?auto=format&fit=crop&w=800&q=80" alt="Cultural Tour"> -->
-       <img src="africa1.jpg" alt="africa 1"   "">
-       <img src="africa2.jpg" alt="africa 1"   "">
-       <img src="africa3.jpg" alt="africa 1"   "">
-       <!-- <img src="afr?ica4.jpg" alt="africa 1"   ""> -->
-       <!-- <img src="africa5.jpg" alt="africa 1"   ""> -->
+            <img src="africa1.jpg" alt="africa 1"   "">
+            <img src="africa2.jpg" alt="africa 1"   "">
+            <img src="africa3.jpg" alt="africa 1"   "">
+            <!-- <img src="afr?ica4.jpg" alt="africa 1"   ""> -->
+            <!-- <img src="africa5.jpg" alt="africa 1"   ""> -->
+            <div class="gallery-overlay" id="galleryOverlay">
+                <span class="gallery-label" id="galleryLabel">HOTELS</span>
+                <button class="gallery-more" id="galleryMoreBtn">more</button>
+            </div>
         </div>
         <span class="hero-text">Discover, Experience, <span>Remember</span></span>
     </section>
@@ -85,11 +87,21 @@
     <script>
         // Simple fade in/out gallery
         const images = document.querySelectorAll('#fadeGallery img');
+        const galleryLabel = document.getElementById('galleryLabel');
+        const galleryMoreBtn = document.getElementById('galleryMoreBtn');
+        const overlayLabels = ["HOTELS", "FOOD", "PLACES", "HOTELS", "FOOD"]; // Adjust as per image order
+        const overlayLinks = ["hotels.html", "Food.html", "places.html", "hotels.html", "Food.html"];
         let current = 0;
         setInterval(() => {
             images[current].classList.remove('active');
             current = (current + 1) % images.length;
             images[current].classList.add('active');
+            if (galleryLabel && overlayLabels[current]) {
+                galleryLabel.textContent = overlayLabels[current];
+            }
+            if (galleryMoreBtn && overlayLinks[current]) {
+                galleryMoreBtn.onclick = () => { window.location.href = overlayLinks[current]; };
+            }
         }, 3200);
 
         // Hamburger/overlay nav logic
