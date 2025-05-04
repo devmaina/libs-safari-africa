@@ -248,6 +248,8 @@ nav a:hover {
     justify-content: center;
     z-index: 2;
     pointer-events: none;
+    /* font-family: "Poppins", sans-serif;
+    text-align: center; */
     background: rgba(0,0,0,0.10); /* subtle overlay, optional */
 }
 
