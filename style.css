@@ -381,6 +381,26 @@ nav a:hover {
     font-weight: bold;
 }
 
+/* Food and hotel image styles */
+.food-hotel-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Margin top auto utility class */
+.mt-auto {
+    margin-top: auto;
+}
+
+/* Header link flex styles */
+.header-link-flex {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
 @media (max-width: 900px) {
     .fade-gallery {
         width: 98vw;
@@ -509,6 +529,7 @@ nav a:hover {
         padding: 2vw;
         font-size: 0.9rem;
         margin: 0.1rem 0;
+        align-items: center;
     }
     main, .main-content, .body-content {
         margin: 0.5rem 0;
@@ -548,5 +569,14 @@ nav a:hover {
     }
     footer {
         font-size: 0.72em !important;
+    }
+    .food-hotel-img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        max-height: none !important;
+        min-height: 0;
+        background: #f4f6fb;
+        display: block;
     }
 }
